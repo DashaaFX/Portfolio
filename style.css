@@ -9,7 +9,6 @@ body {
     transition: background 0.5s;
 }
 
-/* Tagline and Typewriter */
 .tagline {
     font-size: 1.2em;
     color: #b2e6ee;
@@ -24,7 +23,6 @@ body {
     font-family: 'Fira Mono', monospace;
 }
 
-/* Resume Button */
 .resume-btn {
     display: inline-block;
     margin: 1em auto 0 auto;
@@ -45,7 +43,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Section Headings */
 section h2 {
     color: #00bcd4;
     font-size: 1.5em;
@@ -55,7 +52,6 @@ section h2 {
     gap: 0.5em;
 }
 
-/* Timeline/Education */
 .timeline-list {
     list-style: none;
     padding: 0;
@@ -82,7 +78,6 @@ section h2 {
     border-radius: 50%;
 }
 
-/* Testimonials/Quotes */
 .testimonials {
     margin: 2em 0 0 0;
     text-align: center;
@@ -98,7 +93,6 @@ section h2 {
     font-size: 1em;
 }
 
-/* Interactive Profile Picture */
 .interactive-profile .profile-pic {
     box-shadow: 0 4px 24px #00bcd4a0;
     transition: box-shadow 0.3s, transform 0.3s;
@@ -108,7 +102,6 @@ section h2 {
     transform: scale(1.06);
 }
 
-/* Fade-in Animation */
 .fade-in, section {
     opacity: 0;
     transform: translateY(30px);
@@ -119,7 +112,6 @@ section h2 {
     transform: none;
 }
 
-/* Scroll-to-Top Button */
 .scroll-top {
     position: fixed;
     bottom: 32px;
@@ -145,7 +137,6 @@ section h2 {
     transform: scale(1.1);
 }
 
-/* Footer */
 footer {
     text-align: center;
     color: #b2e6ee;
@@ -155,7 +146,6 @@ footer {
     margin-top: 3em;
 }
 
-/* Projects Coming Soon Text */
 .projects-coming-soon {
     color: #b2e6ee;
     font-size: 1.1em;
@@ -163,7 +153,6 @@ footer {
         text-align: center;
         letter-spacing: 1px;
     }
-    /* Contact Icons */
     .contact-icons {
         margin-top: 1.2em;
         display: flex;
@@ -182,7 +171,6 @@ footer {
         color: #f3f3f3;
         transform: scale(1.15) rotate(-4deg);
     }
-    /* Profile Picture Styles */
     .profile-pic-container {
         display: flex;
         justify-content: center;
