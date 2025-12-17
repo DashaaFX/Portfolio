@@ -22,17 +22,24 @@ body {
     margin-bottom: 1.2em;
     font-family: 'Fira Mono', monospace;
 }
+.subheadline {
+    font-size: 1.05em;
+    color: #eaf8fb;
+    opacity: 0.9;
+    margin-top: -0.2em;
+    margin-bottom: 0.8em;
+}
 
 .resume-btn {
     display: inline-block;
-    margin: 1em auto 0 auto;
-    padding: 0.7em 2em;
+    margin: 0.5em 0.5em 0 0.5em;
+    padding: 0.7em 1.4em;
     background: #00bcd4;
     color: #181c2b;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1.1em;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05em;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(0,188,212,0.10);
     transition: background 0.2s, color 0.2s, transform 0.2s;
@@ -41,6 +48,16 @@ body {
     background: #0097a7;
     color: #fff;
     transform: scale(1.05);
+}
+
+/* Secondary style for alternate CTA buttons if needed */
+.resume-btn.secondary {
+    background: transparent;
+    color: #00bcd4;
+    border: 1px solid rgba(0,188,212,0.4);
+}
+.resume-btn.secondary:hover {
+    background: rgba(0,188,212,0.12);
 }
 
 section h2 {
@@ -227,6 +244,8 @@ nav ul li a:hover {
     border-radius: 0 0 32px 32px;
     box-shadow: 0 4px 32px rgba(0,0,0,0.15);
 }
+.hero .resume-btn { display: inline-block; }
+.hero .resume-btn + .resume-btn { margin-left: 0.4em; }
 section {
     max-width: 800px;
     margin: 2em auto;
@@ -260,7 +279,7 @@ section {
 }
 .skill i {
     margin-right: 0.5em;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #00bcd4;
     filter: drop-shadow(0 2px 4px rgba(0,188,212,0.15));
 }
@@ -306,6 +325,7 @@ section {
         transform: translateY(-4px) scale(1.01);
         box-shadow: 0 6px 32px rgba(0,188,212,0.18);
     }
+    /* Make image sizing stable to reduce CLS */
     .project-image {
         min-width: 120px;
         min-height: 120px;
@@ -320,6 +340,7 @@ section {
         height: 120px;
         object-fit: cover;
         border-radius: 0;
+        aspect-ratio: 1 / 1;
     }
     .project-content {
         flex: 1;
@@ -354,6 +375,20 @@ section {
         color: #f3f3f3;
         text-decoration: underline;
     }
+    .project-card:focus-within {
+        outline: 2px solid #00bcd4;
+        outline-offset: 4px;
+    }
+    .project-tags { margin-top: 0.4em; display: flex; gap: 0.4em; flex-wrap: wrap; }
+    .project-tags .tag {
+        background: rgba(0,188,212,0.12);
+        color: #b2e6ee;
+        border: 1px solid rgba(0,188,212,0.18);
+        padding: 0.2em 0.6em;
+        border-radius: 999px;
+        font-size: 0.85em;
+        line-height: 1.6;
+    }
     @media (max-width: 700px) {
         .project-card {
             flex-direction: column;
@@ -364,8 +399,89 @@ section {
             height: 180px;
             min-width: unset;
             min-height: unset;
+            aspect-ratio: 16 / 9;
         }
         .project-content {
             padding: 1em;
         }
     }
+
+/* Highlights section */
+#highlights .highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    display: grid;
+    gap: 0.8em;
+}
+#highlights .highlights-list li {
+    background: rgba(0,188,212,0.08);
+    border: 1px solid rgba(0,188,212,0.15);
+    border-radius: 10px;
+    padding: 0.7em 1em;
+    color: #eaf8fb;
+}
+
+/* Accessible focus styles */
+:focus-visible {
+    outline: 3px solid #00bcd4;
+    outline-offset: 2px;
+}
+a:focus-visible, button:focus-visible {
+    border-radius: 6px;
+}
+
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    gap: 0.6em;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background: rgba(0,188,212,0.10);
+    color: #eaf8fb;
+    border: 1px solid rgba(0,188,212,0.18);
+    border-radius: 999px;
+    padding: 0.4em 0.9em;
+    cursor: pointer;
+    font-weight: 600;
+}
+.filter-btn.active, .filter-btn:hover {
+    background: #00bcd4;
+    color: #181c2b;
+}
+
+/* Pinned repos */
+.pinned-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+}
+.pinned-item {
+    background: rgba(0,188,212,0.10);
+    border: 1px solid rgba(0,188,212,0.18);
+    color: #00bcd4;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.pinned-item:hover { color: #f3f3f3; background: rgba(0,188,212,0.18); }
+
+/* Featured projects */
+.featured-list { display: grid; gap: 1em; }
+.featured-card {
+    background: rgba(24, 28, 43, 0.85);
+    border-radius: 14px;
+    border: 1px solid rgba(0,188,212,0.12);
+    padding: 1.2em 1.2em 1em 1.2em;
+    box-shadow: 0 2px 16px rgba(0,188,212,0.10);
+}
+.featured-card header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6em; }
+.featured-card h3 { margin: 0; color: #00bcd4; }
+.feature-tags { display: flex; gap: 0.4em; }
+.feature-tags span { background: rgba(0,188,212,0.12); border: 1px solid rgba(0,188,212,0.18); color: #b2e6ee; padding: 0.2em 0.6em; border-radius: 999px; font-size: 0.85em; }
+.case-points { margin: 0; padding-left: 1em; }
+.case-points li { margin: 0.3em 0; color: #eaf8fb; }
+.case-points a { color: #00bcd4; text-decoration: none; font-weight: 600; }
+.case-points a:hover { text-decoration: underline; }

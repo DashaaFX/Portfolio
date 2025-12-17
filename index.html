@@ -6,6 +6,16 @@
     <title>Dashnyam Puntsagnorov</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Full-Stack Engineer building fast, accessible web apps. Projects in Next.js, React, Java, Python.">
+    <link rel="icon" href="images/profile.png" type="image/png">
+    <meta property="og:title" content="Dashnyam Puntsagnorov - Portfolio">
+    <meta property="og:description" content="Full-Stack Engineer building fast, accessible web apps. Projects in Next.js, React, Java, Python.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/profile.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dashnyam Puntsagnorov - Portfolio">
+    <meta name="twitter:description" content="Full-Stack Engineer building fast, accessible web apps.">
+    <meta name="twitter:image" content="images/profile.png">
 </head>
 <body>
     <nav>
@@ -22,15 +32,17 @@
             <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
         </div>
         <h1>Dashnyam Puntsagnorov</h1>
-        <p class="tagline">Building creative solutions for the web</p>
+        <p class="tagline">Full‑Stack Engineer building fast, accessible web apps</p>
+        <p class="subheadline">Open to Frontend, Backend, and Full‑Stack roles</p>
         <div class="typewriter"><span id="typewriter-text"></span></div>
         <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+        <a href="mailto:dadhaap@gmail.com?subject=Interview%20Opportunity" class="resume-btn">Contact Me</a>
     </section>
     <section id="about">
     <h2><i class="fas fa-user"></i> About Me</h2>
-        <p>Hello! I'm learning web development and building awesome projects. This site will showcase my journey and work.
-            I am currently focusing on Frontend development and exploring NextJS and Tailwind CSS frameworks
-             to build responsive and dynamic web applications. I'm into cloud computing and backend development as well.
+        <p>Hello! I'm learning new technologies and building awesome projects. This site will showcase my journey and work.
+            I am currently focusing on Full Stack development and exploring NextJS and AWS frameworks
+             to build dynamic and scalable web applications. I'm into cloud computing as well.
 
         </p>
     </section>
@@ -57,55 +69,143 @@
             <div class="skill"><i class="fas fa-users"></i> Agile collaboration</div>
         </div>
     </section>
+    <section id="highlights">
+    <h2><i class="fas fa-award"></i> Honors & Awards</h2>
+        <ul class="highlights-list">
+            <li>Adelphi National Award, Presidential Scholarship, Supplemental Presidential Scholarship</li>
+            <li>Dean’s List (7 Semesters)</li>
+            <li>Cambridge Science Student of the Year (2018)</li>
+            <li>International Math & Science Olympiad (IMSO) – 3rd Place (2016)</li>
+        </ul>
+    </section>
+    <section id="featured">
+    <h2><i class="fas fa-star"></i> Featured Projects</h2>
+        <div class="featured-list">
+            <article class="featured-card">
+                <header>
+                    <h3>Campus Connect</h3>
+                    <div class="feature-tags"><span>Full‑Stack</span><span>Serverless</span></div>
+                </header>
+                <ul class="case-points">
+                    <li><strong>Problem:</strong> Students lack a trusted campus-only marketplace that supports both physical and digital resource exchange. </li>
+                    <li><strong>Approach:</strong> React JS with AWS Lambda + API Gateway, DynamoDB, S3/CloudFront, Stripe; auth + state via Firebase Admin + Zustand.</li>
+                    <li><strong>Impact:</strong> End‑to‑end marketplace with payments, image CDN, secure user flows.</li>
+                    <li><strong>Role:</strong> Full‑stack developer (frontend, backend, infra, payments).</li>
+                    <li><strong>Stack:</strong> React, Vite, Tailwind, Zustand, AWS (Lambda, API GW, DynamoDB, S3, CloudFront), Stripe, Firebase Admin.</li>
+                    <li><strong>Links:</strong> <a href="https://campus-connect-csc-482.vercel.app/" target="_blank">Live Demo</a> · <a href="https://github.com/DashaaFX/Campus-Connect-CSC482" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </article>
+            <article class="featured-card">
+                <header>
+                    <h3>Campus Work Order System</h3>
+                    <div class="feature-tags"><span>Full‑Stack</span><span>Auth</span></div>
+                </header>
+                <ul class="case-points">
+                    <li><strong>Problem:</strong> Manual request handling slows campus maintenance and reduces visibility.</li>
+                    <li><strong>Approach:</strong> Flask app with role‑based dashboards (requester/technician/manager), ticket workflow, filters, CSV export, and comments.</li>
+                    <li><strong>Impact:</strong> Streamlined assignments and status tracking with searchable tickets and audit reports.</li>
+                    <li><strong>Role:</strong> Full‑stack developer (data model, views, RBAC, UI).</li>
+                    <li><strong>Stack:</strong> Python, Flask, Jinja2, SQL, custom CSS.</li>
+                    <li><strong>Links:</strong> <a href="https://github.com/DashaaFX/CSC-440-Final" target="_blank">GitHub Repo</a></li>
+                </ul>
+            </article>
+        </div>
+    </section>
     <section id="projects">
     <h2><i class="fas fa-folder-open"></i> Projects</h2>
+        <div class="filter-bar" aria-label="Project filters">
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="frontend" type="button">Frontend</button>
+            <button class="filter-btn" data-filter="fullstack" type="button">Full‑Stack</button>
+            <button class="filter-btn" data-filter="backend" type="button">Backend</button>
+        </div>
         <div class="projects-list fade-in">
-            <div class="project-card">
+            <div class="project-card" data-tags="backend">
                 <div class="project-image">
-                    <img src="images/meeting-scheduler.png" alt="Meeting Scheduler">
+                    <img src="images/meeting-scheduler.png" alt="Meeting Scheduler" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3>Meeting Scheduler</h3>
                     <p class="project-description">This multithreaded Java application enables users to view, book, and cancel meeting slots.</p>
                     <div class="project-techstack">Tech stack: <span>Java IDE, JavaFX</span></div>
+                    <div class="project-tags"><span class="tag">Backend</span></div>
                     <a href="https://github.com/DashaaFX/Meeting-Scheduler" class="project-link" target="_blank">GitHub Repo</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tags="fullstack">
                 <div class="project-image">
-                    <img src="images/campus-connect.png" alt="Campus Connect">
+                    <img src="images/campus-connect.png" alt="Campus Connect" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3>Campus Connect</h3>
                     <p class="project-description">An Online MarketPlace for College Students to buy,sell,trade items,academic resources and many more!</p>
                     <div class="project-techstack">Tech stack: <span>React, Vite, TailwindCSS, Zustand, AWS Lambda, API Gateway, DynamoDB, S3, CloudFront, Secrets Manager, Firebase Admin SDK, Stripe API</span></div>
+                    <div class="project-tags"><span class="tag">Full‑Stack</span></div>
                     <a href="https://campus-connect-csc-482.vercel.app/" class="project-link" target="_blank">Live Demo</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tags="fullstack">
                 <div class="project-image">
-                    <img src="images/pet-sitter.png" alt="Pet Sitter Response Tracking System">
+                    <img src="images/pet-sitter.png" alt="Pet Sitter Response Tracking System" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3>Pet Sitter Response Tracking System</h3>
                     <p class="project-description">The PetSitter Website is a specialized platform designed 
                         for pet owners seeking reliable and trustworthy pet sitters. This website bridges the gap between clients who need pet sitting services and individuals offering these services</p>
                     <div class="project-techstack">Tech stack: <span>HTML, CSS, PHP, SQL </span></div>
+                    <div class="project-tags"><span class="tag">Full‑Stack</span></div>
                     <a href="https://github.com/DashaaFX/Pet-Sitter-Response-Tracking-System" class="project-link" target="_blank">GitHub Repo</a>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-tags="other">
                 <div class="project-image">
-                    <img src="images/basketball.png" alt="JavaFX Basketball Game">
+                    <img src="images/basketball.png" alt="JavaFX Basketball Game" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3>Interactive Basketball Game</h3>
                     <p class="project-description">This project is an interactive basketball aim-bot game built with JavaFX, allowing users to play a fun and engaging basketball simulation.</p>
                     <div class="project-techstack">Tech stack: <span>Java, JavaFX</span></div>
+                    <div class="project-tags"><span class="tag">Other</span></div>
                     <a href="https://github.com/DashaaFX/JavaFX-Project" class="project-link" target="_blank">GitHub Repo</a>
                 </div>
             </div>
-            <p class="projects-coming-soon">New projects coming soon!</p>
+            <div class="project-card" data-tags="fullstack">
+                <div class="project-image">
+                    <img src="images/fitness-tracker.png" alt="Fitness Tracker" loading="lazy" decoding="async">
+                </div>
+                <div class="project-content">
+                    <h3>Fitness Tracker</h3>
+                    <p class="project-description">Full-stack website to log workouts, exercises, sets, and view stats, track progress and get streaks.</p>
+                    <div class="project-techstack">Tech stack: <span>Next.js 14, TypeScript, Tailwind CSS, NextAuth.js, MongoDB Atlas + Mongoose, Zod.</span></div>
+                    <div class="project-tags"><span class="tag">Full‑Stack</span></div>
+                    <a href="https://fitness-tracker-app-umber.vercel.app/" class="project-link" target="_blank">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card" data-tags="fullstack">
+                <div class="project-image">
+                    <img src="images/campus-work-order.png" alt="Campus Work Order System" loading="lazy" decoding="async">
+                </div>
+                <div class="project-content">
+                    <h3>Campus Work Order System</h3>
+                    <p class="project-description">Students submit work order tickets. Faculty and Admin manage, update, and track tickets.</p>
+                    <div class="project-techstack">Tech stack: <span>Python 3, Flask, Jinja2 (HTML templates), CSS</span></div>
+                    <div class="project-tags"><span class="tag">Full‑Stack</span></div>
+                    <a href="https://github.com/DashaaFX/CSC-440-Final" class="project-link" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project-card" data-tags="frontend">
+                <div class="project-image">
+                    <img src="images/charity-water.png" alt="charity: water Campus Explorer Game" loading="lazy" decoding="async">
+                </div>
+                <div class="project-content">
+                    <h3>charity: water Campus Explorer</h3>
+                    <p class="project-description">Web-based mini-game inspired by charity: water—raising awareness of the global water crisis with learn-and-donate links.</p>
+                    <div class="project-techstack">Tech stack: <span>HTML, CSS, JavaScript</span></div>
+                    <div class="project-tags"><span class="tag">Frontend</span></div>
+                    <a href="https://dashaafx.github.io/charity-water-final" class="project-link" target="_blank">Live Demo</a>
+                </div>
+            </div>
+            <p class="projects-coming-soon">See more on <a href="https://github.com/DashaaFX" target="_blank">GitHub</a>.</p>
         </div>
     </section>
     <section id="contact">
@@ -182,6 +282,24 @@
     }
     window.addEventListener('scroll', fadeInOnScroll);
     window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+    </script>
+    <script>
+    // Simple project filter
+    const filterBar = document.querySelector('.filter-bar');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.projects-list .project-card');
+    function applyFilter(tag) {
+        projectCards.forEach(card => {
+            const tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+            const show = tag === 'all' || tags.includes(tag);
+            card.style.display = show ? '' : 'none';
+        });
+    }
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilter(btn.getAttribute('data-filter'));
+    }));
     </script>
     </section>
 </body>
